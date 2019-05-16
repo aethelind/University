@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nutrition Infomrmation>
+    <product name>
+        White Cookies
+    </product name>
+    <Serving size>1 package</Serving size>
+    <calories>260 calories,100 fat Calories
+        </calories>
+        <fat>11 grams of fat,2 grams of saturated fat</fat>
+        <sodium> 210 milligrams of sodium</sodium>
+        <cholesterol> 5 milligrams of cholesterol</cholesterol>
+        <carbohydrates> 36 grams </carbohydrates>
+        <fiber>2 grams</fiber>
+        <sugar>15 grams</sugar>
+        <protein>5 grams</protein>
+</nutrition Infomrmation>

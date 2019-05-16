@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Two -->
+	<!-- Question Five -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Five</title>
+		<script>
+			var tmp; // the user's raw input
+			var a; // the int parsed from the first user input 
+			var b; // the int parsed from the second user input 
+
+			// getting both integers from the user
+			tmp = window.prompt( "Please enter an integer:", 100 );
+			a = parseInt(tmp);			
+			tmp = window.prompt( "Please enter another integer:", 20 );
+			b = parseInt(tmp);
+			
+			if(a<b){
+				// if a is too low, it cannot be a multiple of b.
+				document.write("<h1>" + a + " is too low to be a multiple of " + b + ".</h1>");
+			} else if (a%b == 0){
+				// if the remainder is 0, a is a multiple.
+					document.write("<h1>" + a + " is a multiple of " + b + "!</h1>");
+			} else {
+				// otherwise, a is not a multiple.
+				document.write("<h1>" + a + " is not a multiple of " + b + "!</h1>");
+			}
+		  </script>
+	</head>
+	<body></body>
+</html> 

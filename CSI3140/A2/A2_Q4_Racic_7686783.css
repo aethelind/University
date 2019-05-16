@@ -1,0 +1,39 @@
+/*	Aethelind Racic 
+	7686783 
+		Assignment Two
+		Question Four*/				
+
+.squareAnimation
+ {
+	position: relative;
+	-webkit-animation: squareAnimation linear 4s 1s infinite;
+	-moz-animation: squareAnimation linear 4s 1s infinite;
+	animation: squareAnimation linear 4s 1s infinite;
+ }
+ 
+ @-webkit-keyframes squareAnimation 
+ {
+	0%   {left: 0px; top: 0px;}
+	25%  {left: 100px; top: 0px;}
+	50%  {left: 100px; top: 100px;}
+	75%  {left: 0px; top: 100px;}
+	100% {left: 0px; top: 0px;}
+ }
+ 
+ @-moz-keyframes squareAnimation 
+ {
+	0%   {left: 0px; top: 0px;}
+	25%  {left: 100px; top: 0px;}
+	50%  {left: 100px; top: 100px;}
+	75%  {left: 0px; top: 100px;}
+	100% {left: 0px; top: 0px;}
+ }
+ 
+ @keyframes squareAnimation
+ {
+	0%   {left: 0px; top: 0px;}
+	25%  {left: 100px; top: 0px;}
+	50%  {left: 100px; top: 100px;}
+	75%  {left: 0px; top: 100px;}
+	100% {left: 0px; top: 0px;}
+ }

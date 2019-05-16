@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    elementFormDefault="qualified">
+    <xs:element name='class'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='product' type='product Type' minOccurs='0' maxOccurs='unbounded' />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:package name="Product">
+        <xs:sequence>
+            <xs:element name="Product" type="xs:string" />
+            <xs:element name="Serving size" type="xs:string" />
+            <xs:element name="Calories" type="xs:string" />
+            <xs:element name="fat" type="xs:string" />
+            <xs:element name="sodium" type="xs:string" />
+            <xs:element name="cholestrol" type="xs:string" />
+            <xs:element name="carbohydrates" type="xs:string" />
+            <xs:element name="fiber" type="xs:string" />
+            <xs:element name="Sugar" type="xs:string" />
+            <xs:element name="Calories protiens" type="xs:string" />
+
+        </xs:sequence>
+
+    </xs:package>
+</xs:schema>

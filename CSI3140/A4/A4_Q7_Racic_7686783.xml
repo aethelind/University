@@ -1,0 +1,24 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "A4_Q7_Racic_7686783.xsl"?>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Four -->
+	<!-- Question Seven -->
+
+<information>
+	<name>Grandma White's Cookies</name>
+	<size>1 package</size>
+	<nutrition>
+		<calories>260</calories>
+		<fatCalories>100</fatCalories>
+		<fat>11g</fat>
+		<saturatedFat>2g</saturatedFat>
+		<cholesterol>5mg</cholesterol>
+		<sodium>210mg</sodium>
+		<carbohydrates>36g</carbohydrates>
+		<fibre>2g</fibre>
+		<sugar>15g</sugar>
+		<protein>5g</protein>
+	</nutrition>
+</information> 

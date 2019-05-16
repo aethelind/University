@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Three -->
+	<!-- Question Two -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Two</title>	
+		<script>
+			// Set up initial target number.
+			var target = getNewTarget();
+			
+			// On load, the script sets up an event listener in the button.
+			function start(){
+				var button = document.getElementById( "button" );
+				button.addEventListener( "click", guess, false );
+				var soln = document.getElementById( "solution" );
+				soln.innerHTML = "Shh.. the secret is " + target + "! (for testing purposes)";
+			}
+			
+			// When the user guesses, their input is parsed and analyzed. The appropriate message is shown.
+			function guess(){
+				var input = document.getElementById("input");
+				var usr = parseInt(input.value);
+				var display = document.getElementById( "msg" );
+				var soln = document.getElementById( "solution" );
+				
+				// when the user finds the target, they get congratulated and a new target is found so they may play again.
+				if(usr == target){
+					display.innerHTML = "Congratulations. You guessed the number! <br> Play again.";
+					target = getNewTarget();
+				} else if (usr < target) {
+					display.innerHTML = "Too low. Try again.";
+				} else if (usr > target) {
+					display.innerHTML = "Too high. Try again.";
+				}
+				soln.innerHTML = "Shh.. the secret is " + target + "! (for testing purposes)"; // this line only included to save time when testing.
+			}
+			
+			// Generates a new random number from 1 to 1000.
+			function getNewTarget(){
+				return Math.floor(1+Math.random()*1000);
+			}
+		
+			window.addEventListener( "load", start, false );
+		</script>
+	</head>
+	<body>
+		<h1>Number Game!</h1>		
+		<p>
+			<input id="input" type="text" size="25" maxlength="50" placeholder="Make your guess...">
+			<input id="button" type="button" value="-->">
+		</p>
+		<h2 id="msg">Guess a number between 1 and 1000</h2>
+		<br><br><br><br>
+		<p id="solution"></p>
+	</body>
+</html>

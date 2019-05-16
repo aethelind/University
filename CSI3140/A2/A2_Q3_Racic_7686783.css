@@ -1,0 +1,11 @@
+/*	Aethelind Racic 
+	7686783 
+		Assignment Two
+		Question Three*/				
+
+div 	{ 	width: 500px;
+			height: 500px;
+			background: radial-gradient(left bottom, blue, white, red);
+			background: -webkit-radial-gradient(left bottom, blue, white, red);
+			background: -moz-radial-gradient(left bottom, blue, white, red);			
+		}

@@ -1,0 +1,13 @@
+/*	Aethelind Racic 
+	7686783 
+		Assignment Four
+		Question Two*/		
+		
+img 			{ 	width:100px; 
+					height:100px;
+				}
+
+.shuffleButton	{	text-align: center;
+					padding: 1em;
+					margin: .5em;
+				}

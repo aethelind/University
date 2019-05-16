@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Four -->
+	<!-- Question Six -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Six</title>	
+	</head>
+	<body>
+		<h1>Question Six</h1>
+		<canvas id = "q6" width = "600" height = "600"></canvas>
+		<script>
+			// Getting node.
+			var canvas = document.getElementById("q6");
+			var context = canvas.getContext("2d");
+			
+			// Drawing a pentagon.
+			context.beginPath();
+			context.moveTo(250, 0);
+			context.lineTo(500, 225);
+			context.lineTo(500, 500);
+			context.lineTo(0, 500);
+			context.lineTo(0, 225);
+			context.lineTo(250, 0);
+			
+			// Creating vertical gradient with three colour stops.
+			var grad = context.createLinearGradient(0, 0, 0, 600);
+			
+			grad.addColorStop(0, "purple");
+			grad.addColorStop(0.5, "red");
+			grad.addColorStop(1, "orange");
+			
+			// Filling canvas shape.
+			context.fillStyle = grad;
+			context.fill();
+		</script>
+	</body>
+</html>

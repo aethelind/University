@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Two -->
+	<!-- Question Six -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Six</title>
+		<script>
+			var tmp; // user's input
+			var flag = true; // flag for while loop
+			var pal; // palindrome as an int parsed from the user input.
+		
+			while (flag){
+				tmp = window.prompt("Please enter a five digit palindrome", 12321); // get user's input
+				
+				if(tmp.length != 5){
+					// checking for correct length
+					window.alert("Wrong length! Try again.");
+				} else if (tmp.charAt(0) == '0'){
+					// checking the input does not start with a 0.
+					window.alert("Cannot start with a zero! Try again.");
+				} else {
+					// if those conditions are satisfied, then the input is parsed and the while loop exited.
+					pal = parseInt(tmp);
+					flag = false;
+				}
+			}
+			
+			// checks if the first and last digit are the same, and if the second and second-last digit are the same.
+			if( ((pal%10) == (Math.floor(pal/10000)%10)) && ((Math.floor(pal/10)%10)==(Math.floor(pal/1000)%10)) ){
+				document.write("<h1>" + pal + " is a five-digit palindrome which does not begin with zero.</h1>");
+			} else {
+				// otherwise, this is not a palindrome.
+				document.write("<h1>" + pal + " is not a palindrome.</h1>");
+			}
+		  </script>
+	</head>
+	<body></body>
+</html> 

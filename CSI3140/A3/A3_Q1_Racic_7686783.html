@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Three -->
+	<!-- Question One -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question One</title>	
+		<script>
+			// Setting up event listeners on buttons.
+			function start(){
+				var celButton = document.getElementById( "celsiusButton" );
+				celButton.addEventListener( "click", celButtonPressed, false );
+				var fahButton = document.getElementById( "fahrenheitButton" );
+				fahButton.addEventListener( "click", fahButtonPressed, false );
+			 } 
+			 // functions to handle button presses.
+			 // gets user's input, parses it, converts it, and prints it.
+			function celButtonPressed(){
+				var input = document.getElementById("input");
+				var f = parseInt(input.value);
+				var c = celsius(f);
+				var result = document.getElementById( "result" );
+				result.innerHTML = "<h3>" + c + " degrees Celsius.</h3>";
+			} 
+			function fahButtonPressed(){
+				var input = document.getElementById("input"); // getting input
+				var c = parseInt(input.value); // parsing value
+				var f = fahrenheit(c); // converting 
+				var result = document.getElementById( "result" );
+				result.innerHTML = "<h3>" + f + " degrees Fahrenheit.</h3>"; // printing
+			} 
+			
+			// 1a. returns celsius equivalent of fahrenheit temperature
+			function celsius( f ){
+				return 5.0/9.0*(f-32);
+			}
+			// 1b. returns fahrenheit equivalent of celsius temperature
+			function fahrenheit( c ){
+				return 9.0/5.0*c+32;
+			}
+			
+			window.addEventListener( "load", start, false );
+		</script>
+	</head>
+	<body>
+		<h1>Conversion Between Celsius and Fahrenheit</h1>
+		<h3>Enter a temperature for conversion:</h3>
+		<p><input id="input" type="text" size="25" maxlength="50" placeholder="42"></p>
+		<p>
+			<input id="celsiusButton" type="button" value="F to C">
+			<input id="fahrenheitButton" type="button" value="C to F">
+		</p>
+		<p id="result"></p>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment One -->
+	<!-- Question Four -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Four</title>	
+	</head>
+	<body>
+		<h1>Campus Feedback Form</h1>
+		<h3>Fill out this form to let us know about your experience.</h3>
+		
+		<form method = "post" action = "http://deitel.com">
+			<input type="hidden" name="recipient" value="deitel@deitel.com">
+			<input type="hidden" name="subject" value="Campus Feedback Form">
+			<input type="hidden" name="redirect" value="main.html">		
+			<p>
+				<strong>Personal Information</strong>
+				<p><label>Name:  <input type="text" name="name" size="25" maxlength="50"></label></p>
+				<p><label>Email: <input type="text" name="email" size="25" maxlength="50"></label></p>
+			</p>		
+			<p>
+				<strong>What did you like about our campus?</strong><br>
+				<label><input name="likedmost" type="checkbox" value="campus"> Campus</label><br>
+				<label><input name="likedmost" type="checkbox" value="students"> Students</label><br>
+				<label><input name="likedmost" type="checkbox" value="location"></label> Location<br>
+				<label><input name="likedmost" type="checkbox" value="atmosphere"> Atmosphere</label><br>
+				<label><input name="likedmost" type="checkbox" value="dorms"> Dorm Rooms</label><br>
+				<label><input name="likedmost" type="checkbox" value="sports"> Sports</label><br>				
+			</p>			
+			<p>
+				<strong>How did you become interested in our univeristy?</strong><br>
+				<label><input name="interested" type="radio" value="friends" checked> Friends</label><br>
+				<label><input name="interested" type="radio" value="tv"> Television</label><br>
+				<label><input name="interested" type="radio" value="internet"> Internet</label><br>
+				<label><input name="interested" type="radio" value="other"> Other</label><br>
+			</p>			
+			<p>
+				<label><strong>Additional Comments</strong><br>
+				<textarea name="comments" rows="5" cols="32">Enter text here...</textarea></label>
+			</p>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</p>	
+		</form>	
+	</body>
+</html>

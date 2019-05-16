@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- Aethelind Racic -->
+<!-- 7686783 -->
+	<!-- Assignment Three -->
+	<!-- Question Three -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Question Three</title>	
+		<script>
+			// Set up initial target number.
+			var target = getNewTarget();
+			// Initialize number of guesses to one.
+			var count = 1;
+			
+			// On load, the script sets up an event listener in the button.
+			function start(){
+				var button = document.getElementById( "button" );
+				button.addEventListener( "click", guess, false );
+				var soln = document.getElementById( "solution" );
+				soln.innerHTML = "Shh.. the secret is " + target + "! (for testing purposes.)";
+			}
+			
+			function guess(){
+				var input = document.getElementById("input");
+				var usr = parseInt(input.value);
+				var display = document.getElementById( "msg" );
+				var guessCount = document.getElementById("guessCount");
+				
+				var soln = document.getElementById( "solution" );
+				
+				if(isNaN(usr) || usr < 1 || usr > 1000){
+					display.innerHTML = "Wrong input! You should enter a number between 1 and 1000.";
+				} else {
+					if(usr == target){
+						// the count is initialzed to the number of the "next guess", so if user is on target, we take the current count since it is accurate.
+						if(count < 10){
+							display.innerHTML = "Either you know the secret or you got lucky!";
+						} else if (count == 10){
+							display.innerHTML = "Ahah! You know the secret!";
+						} else {
+							display.innerHTML = "You should be able to do better!";
+						}
+						target = getNewTarget();
+						count = 1;
+					} else {
+						// however if the user is not on target we increment the count, because it will take them at least another round to get it.
+						count++;
+						if (usr < target) {
+							display.innerHTML = "Too low. Try again.";
+						} else if (usr > target) {
+							display.innerHTML = "Too high. Try again.";
+						}
+					}
+					guessCount.innerHTML = "This is guess number " + count + ".";
+					soln.innerHTML = "Shh.. the secret is " + target + "! (for testing purposes)"; // this line only included to save time when testing.
+				}
+			}
+			
+			// Generates a new random number from 1 to 1000.
+			function getNewTarget(){
+				return Math.floor(1+Math.random()*1000);
+			}
+		
+			window.addEventListener( "load", start, false );
+		</script>
+	</head>
+	<body>
+		<h1>Number Game!</h1>		
+		<h3 id="guessCount">This is guess number 1.</h3>
+		<p>
+			<input id="input" type="text" size="25" maxlength="50" placeholder="Make your guess...">
+			<input id="button" type="button" value="-->">
+		</p>
+		<h2 id="msg">Guess a number between 1 and 1000</h2>	
+		<br><br><br><br>
+		<p id="solution"></p>
+	</body>
+</html>

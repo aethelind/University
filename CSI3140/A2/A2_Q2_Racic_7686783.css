@@ -1,0 +1,22 @@
+/*	Aethelind Racic 
+	7686783 
+		Assignment Two
+		Question Two*/				
+
+div 			{ 	text-align: center;
+					border-width: 5px;
+					padding: .2em;
+					margin: .5em;
+				}
+
+a 				{ 	padding: .5em;	}
+		
+div a			{	color: red; 
+					border: thick solid blue;
+					background-color: yellow;
+				}
+					
+div a:hover 	{	color: pink; 
+					border: thick dotted cyan;	
+					background-color: lightyellow;
+				}
