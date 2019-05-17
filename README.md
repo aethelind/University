@@ -1,2 +1,2 @@
 # University
-Some coursework complete for my degree, organized by class.
+Some coursework completed for my degree, organized by class.
